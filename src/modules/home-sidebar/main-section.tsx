@@ -12,18 +12,18 @@ import Link from "next/link";
 
 const items = [
   {
-    title: "Home",
+    title: "홈",
     url: "/",
     icon: HomeIcon,
   },
   {
-    title: "Subscribed",
+    title: "구독",
     url: "/feed/subscribed",
     icon: PlaySquareIcon,
     auth: true,
   },
   {
-    title: "Trending",
+    title: "인기 동영상",
     url: "/feed/trending",
     icon: FlameIcon,
   },

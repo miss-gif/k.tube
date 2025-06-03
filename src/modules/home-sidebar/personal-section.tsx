@@ -14,19 +14,19 @@ import {
 
 const items = [
   {
-    title: "History",
+    title: "시청기록",
     url: "/playlists/history",
     icon: HistoryIcon,
     auth: true,
   },
   {
-    title: "Liked videos",
+    title: "좋아요 표시한 동영상",
     url: "/playlists/liked",
     icon: ThumbsUpIcon,
     auth: true,
   },
   {
-    title: "All playlists",
+    title: "재생목록",
     url: "/playlists",
     icon: ListVideoIcon,
     auth: true,
@@ -36,7 +36,7 @@ const items = [
 export default function PersonalSection() {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>You</SidebarGroupLabel>
+      <SidebarGroupLabel>내 페이지</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => (
