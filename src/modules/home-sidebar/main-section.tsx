@@ -9,6 +9,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
+import { useAuth, useClerk } from "@clerk/nextjs";
 
 const items = [
   {
@@ -30,6 +31,9 @@ const items = [
 ];
 
 export default function MainSection() {
+  const clerk = useClerk();
+  const { isSignedIn } = useAuth();
+
   return (
     <SidebarGroup>
       <SidebarGroupContent>
@@ -40,7 +44,12 @@ export default function MainSection() {
                 tooltip={item.title}
                 asChild
                 isActive={false} // Todo: Implement active state logic
-                onClick={() => {}} // Todo: handle click
+                onClick={(e) => {
+                  if (item.auth && !isSignedIn) {
+                    e.preventDefault();
+                    clerk.openSignIn();
+                  }
+                }}
               >
                 <Link
                   prefetch
