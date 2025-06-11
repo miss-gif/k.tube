@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "webhook": "ngrok http --domain=hip-deeply-akita.ngrok-free.app 3000",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -56,6 +57,7 @@
     "react-resizable-panels": "^3.0.2",
     "recharts": "^2.15.3",
     "sonner": "^2.0.4",
+    "svix": "1.45.1",
     "tailwind-merge": "^3.3.0",
     "vaul": "^1.1.2",
     "zod": "^3.25.42"
